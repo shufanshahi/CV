@@ -28,12 +28,12 @@
 
 \setlist[itemize]{
   leftmargin=1.25em,
-  itemsep=0pt,
-  topsep=1pt,
+  itemsep=1pt,
+  topsep=2pt,
   parsep=0pt,
   partopsep=0pt
 }
-\setlength{\parskip}{1.5pt}
+\setlength{\parskip}{2pt}
 \setlength{\parindent}{0pt}
 
 \newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
@@ -80,7 +80,7 @@
 \titleformat{\section}
   {\Large\bfseries\scshape}{}{0em}{\color{RoyalPurple}}
   [\color{RoyalPurple}\titlerule]
-\titlespacing*{\section}{0pt}{0.9em}{0.45em}
+\titlespacing*{\section}{0pt}{1.1em}{0.65em}
 
 \renewenvironment{rSection}[1]{
   \section{#1}
@@ -94,7 +94,7 @@
 }
 
 \begin{document}
-\normalsize
+\fontsize{11.5pt}{14pt}\selectfont
 
 % \begin{rSection}{Professional Profile}
 % Computer Science undergraduate with hands-on experience in data analysis, machine learning, and full-stack development. Built web and mobile applications using React, Node.js, and Firebase. Skilled in relational databases, API integration, and delivering real-world solutions through hackathons and academic projects.
@@ -165,7 +165,7 @@ B.Sc. in Computer Science and Engineering
   \item Combines social sharing, portfolio and CV generation, job searching, and AI-powered interview preparation.
 \end{itemize}
 
-\Needspace{6\baselineskip}
+\Needspace{4\baselineskip}
 \projectheading{Redrick Routinson}{Campus Automation}{Python, React, Flask, Firebase}{%
   \href{https://github.com/shufanshahi/RedrickRoutinson}{\faGithub\ GitHub}
   \quad
