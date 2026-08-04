@@ -1,0 +1,251 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Medium Length Professional CV
+% LaTeX Template
+% Version 2.0 (8/5/13)
+%
+% Content adapted from main.tex while retaining the cv_4.tex layout.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{resume}
+
+\usepackage[dvipsnames]{xcolor}
+\usepackage{fontawesome5}
+\usepackage{enumitem}
+\usepackage{mathpazo}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{changepage}
+\usepackage{needspace}
+\usepackage[
+  colorlinks=true,
+  urlcolor=RoyalPurple,
+  linkcolor=RoyalPurple,
+  pdfauthor={Shufan Shahi},
+  pdftitle={Shufan Shahi - Curriculum Vitae}
+]{hyperref}
+
+\usepackage[left=0.5in,top=0.6in,right=0.5in,bottom=0.75in]{geometry}
+
+\setlist[itemize]{
+  leftmargin=1.25em,
+  itemsep=2pt,
+  topsep=3pt,
+  parsep=0pt,
+  partopsep=0pt
+}
+\setlength{\parskip}{3pt}
+\setlength{\parindent}{0pt}
+
+\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+\newcommand{\projectlinks}[1]{%
+  \par\smallskip
+  {\small #1}\par
+}
+
+\name{Shufan Shahi}
+
+% resume.cls prints the third \address first, followed by the first and second.
+\address{
+  \faPhone\ \href{tel:+8801990935044}{+880 1990-935044} \quad
+  \faEnvelope\ \href{mailto:shufanshahi@gmail.com}{shufanshahi@gmail.com}
+}
+\address{
+  \faGithub\ \href{https://github.com/shufanshahi}{github.com/shufanshahi} \quad
+  \faLinkedin\ \href{https://www.linkedin.com/in/shahi-shufan-680135289/}{linkedin.com/in/shahi-shufan}
+}
+\address{\faMapMarker*\ Dhaka, Bangladesh}
+
+% Keep the template's centered header while containing its harmless \centerline warning.
+\renewcommand{\printaddress}[1]{%
+  \begingroup
+    \hfuzz=31pt
+    \def\\{\addressSep\ }%
+    \centerline{#1}\par
+  \endgroup
+  \addressskip
+}
+
+\makeatletter
+\renewcommand{\printname}{%
+  \begingroup
+    \hfuzz=31pt
+    \hfil{\MakeUppercase{\namesize\bfseries\@name}}\hfil
+    \nameskip\break
+  \endgroup
+}
+\makeatother
+
+\titleformat{\section}
+  {\Large\bfseries\scshape}{}{0em}{\color{RoyalPurple}}
+  [\color{RoyalPurple}\titlerule]
+\titlespacing*{\section}{0pt}{1.5em}{1em}
+
+\renewenvironment{rSection}[1]{
+  \section{#1}
+  \begin{list}{}{
+      \setlength{\leftmargin}{0.2em}
+  }
+  \item[]
+}{
+  \end{list}
+  \vspace{2pt}
+}
+
+\begin{document}
+
+% \begin{rSection}{Professional Profile}
+% Computer Science undergraduate with hands-on experience in data analysis, machine learning, and full-stack development. Built web and mobile applications using React, Node.js, and Firebase. Skilled in relational databases, API integration, and delivering real-world solutions through hackathons and academic projects.
+% \end{rSection}
+
+\begin{rSection}{Education}
+\textbf{Islamic University of Technology} \hfill \textbf{2022--Present} \\
+B.Sc. in Computer Science and Engineering
+\begin{itemize}
+  \item Current CGPA: 3.55
+  \item Relevant coursework: Data Structures and Algorithms, Machine Learning, Database Systems, and Computer Networks
+\end{itemize}
+\end{rSection}
+
+\begin{rSection}{Experience}
+\textbf{Intern} \hfill \textbf{2025} \\
+\emph{Battery Low Interactive Ltd.}
+\begin{itemize}
+  \item Learned Flutter application development, REST API integration, and practical applications of fine-tuned machine learning models.
+\end{itemize}
+
+\textbf{Senior Executive} \hfill \textbf{2025--2026} \\
+\emph{Project Aero}
+\begin{itemize}
+  \item Led university drone development initiatives and contributed to international UAV competitions.
+\end{itemize}
+\end{rSection}
+
+\begin{rSection}{Achievements}
+\begin{itemize}[leftmargin=*,label=$\bullet$]
+  \item \textbf{First Runner-up, IUT Coderush Hackathon} \hfill \textbf{2025} \\
+  Built an application under tight deadlines in a fast-paced team.
+  \item \textbf{5th Place, VAND4 International Competition} \hfill \textbf{2026} \\
+  Zero-Shot Industrial Track; built a zero-shot computer vision pipeline for detecting anomalies in industrial images using foundation models.
+  \item \textbf{7th Place, BAIC Datathon} \hfill \textbf{2025} \\
+  Analyzed datasets using preprocessing, visualization, and modeling.
+\end{itemize}
+\end{rSection}
+
+\Needspace{13\baselineskip}
+\begin{rSection}{Projects}
+\textbf{Drone Vision} $|$ \emph{PyTorch, YOLOv11X, ByteTrack} \\
+\emph{Aerial human and vehicle detection, counting, and tracking pipeline.}
+\projectlinks{\faGithub\ \href{https://github.com/shufanshahi/droneVision}{GitHub repository}}
+\begin{itemize}
+  \item Fine-tuned YOLOv11X on VisDrone with class-balanced training and tiled inference for small aerial objects.
+  \item Implemented human counting and multi-object tracking using ByteTrack.
+\end{itemize}
+
+\textbf{BD Traffic Monitoring System} $|$ \emph{PyTorch, YOLO11L, Flask, Docker} \\
+\emph{Intelligent traffic analysis system tailored for Bangladesh road conditions.}
+\projectlinks{%
+  \faGithub\ \href{https://github.com/shufanshahi/bd-traffic-monitoring-system}{GitHub repository}
+  \quad
+  \faRocket\ \href{https://huggingface.co/spaces/shufanshahi/bd-traffic-monitoring-system}{Live demo}
+}
+\begin{itemize}
+  \item Fine-tuned YOLO on Bangladesh traffic data to detect local vehicle types.
+\end{itemize}
+
+\textbf{Postfolio} $|$ \emph{Spring Boot, Next.js, Docker, RabbitMQ, Stripe} \\
+\emph{Empowering professionals to grow, connect, and showcase achievements.}
+\projectlinks{%
+  \faGithub\ \href{https://github.com/shufanshahi/Postfolio}{GitHub repository}
+  \quad
+  \faYoutube\ \href{https://www.youtube.com/watch?v=U6N-ioqvg9c}{Demo video}
+}
+\begin{itemize}
+  \item Combines social sharing, portfolio and CV generation, job searching, and AI-powered interview preparation.
+\end{itemize}
+
+\textbf{Redrick Routinson} $|$ \emph{Python, React, Flask, Firebase} \\
+\emph{A platform designed to simplify university life.}
+\projectlinks{%
+  \faGithub\ \href{https://github.com/shufanshahi/RedrickRoutinson}{GitHub repository}
+  \quad
+  \faYoutube\ \href{https://www.youtube.com/watch?v=Fg-GkZrsIzw}{Demo video}
+}
+\begin{itemize}
+  \item Developed genetic algorithm-based scheduling and automated exam seat planning with QR attendance.
+  \item Added class swapping, event management, forums, and lost-and-found features.
+\end{itemize}
+
+\textbf{Biztrack} $|$ \emph{Next.js, Node.js, PostgreSQL} \\
+\emph{Business analysis software for small and medium-sized enterprises.}
+\projectlinks{%
+  \faGithub\ \href{https://github.com/shufanshahi/biztrack}{GitHub repository}
+  \quad
+  \faYoutube\ \href{https://www.youtube.com/watch?v=STNoXqq8kQM}{Demo video}
+}
+\begin{itemize}
+  \item Implemented AI modules for real-time finance tracking, risk alerts, segmentation, and forecasting for intelligent business insights.
+\end{itemize}
+
+\textbf{Animeverse} $|$ \emph{Flutter, Firebase} \\
+\emph{Smart, AI-based anime recommendation system.}
+\projectlinks{\faGithub\ \href{https://github.com/shufanshahi/animeverse}{GitHub repository}}
+\begin{itemize}
+  \item Enables users to discover shows based on their interests and interact with the application through an intelligent chatbot.
+\end{itemize}
+\end{rSection}
+
+\Needspace{18\baselineskip}
+\begin{rSection}{Research Experience}
+\textbf{Visual Anomaly Detection Using DINOv2 Patch Embeddings} \hfill \textbf{2026}
+\begin{itemize}
+  \item Extracted patch-level representations from images using pretrained DINOv2 encoders.
+  \item Localized anomalous regions by comparing test-image embeddings with representations from normal reference images.
+\end{itemize}
+
+\Needspace{12\baselineskip}
+\textbf{Multimodal Emotion Recognition Using Graph Neural Networks} \hfill \textbf{2026}
+\begin{itemize}
+  \item Built a multimodal emotion recognition pipeline using hypergraph neural networks to model higher-order cross-modal relationships.
+  \item Integrated frequency-domain representations to mitigate modality imbalance and improve cross-modal feature fusion.
+\end{itemize}
+
+\Needspace{12\baselineskip}
+\textbf{Bangla--English Cross-Lingual News Retrieval} \hfill \textbf{2025}
+\begin{itemize}
+  \item Developed a hybrid CLIR pipeline combining lexical, fuzzy, and embedding-based retrieval.
+  \item Supported cross-lingual and code-switched queries through semantic relevance ranking.
+\end{itemize}
+
+\Needspace{12\baselineskip}
+\textbf{Weakly Supervised NER with Sparse CHMM and BERT} \hfill \textbf{2025}
+\begin{itemize}
+  \item Combined noisy labeling functions to train without manually annotated ground truth.
+  \item Captured sequence dependencies with Sparse CHMM and contextual BERT embeddings.
+\end{itemize}
+\end{rSection}
+
+\begin{rSection}{Technical Skills}
+\textbf{Programming Languages:} Python, C++, Java \\
+\textbf{Data and Machine Learning:} PyTorch, TensorFlow, scikit-learn, NumPy, Pandas \\
+\textbf{Databases:} MySQL, Oracle SQL, MongoDB, Firebase, PostgreSQL \\
+\textbf{Web Development:} HTML, CSS, JavaScript, React, Tailwind CSS, Next.js, Spring Boot \\
+\textbf{Mobile Development:} React Native, Flutter \\
+\textbf{Visualization:} Matplotlib, Seaborn \\
+\textbf{Development Tools:} Git, Linux, JavaFX, Swing, REST APIs, Figma, Jupyter \\
+\textbf{IDEs and Platforms:} VS Code, IntelliJ IDEA, Scene Builder, Kaggle, Google Cloud Platform \\
+\textbf{Soft Skills:} Communication, teamwork, problem-solving
+\end{rSection}
+
+\begin{rSection}{Languages}
+\textbf{English} \quad \textbf{Bangla}
+\end{rSection}
+
+\begin{rSection}{Reference}
+\textbf{Shahriar Ivan} \\
+Assistant Professor, Department of CSE, IUT \\
+\textbf{Specialization:} Machine Learning, Deep Learning, Computer Vision \\
+\faEnvelope\ \href{mailto:shahriarivan@iut-dhaka.edu}{shahriarivan@iut-dhaka.edu}
+\end{rSection}
+
+\end{document}
