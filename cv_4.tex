@@ -38,9 +38,10 @@
 
 \newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
 \newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
-\newcommand{\projectlinks}[1]{%
-  \par\smallskip
-  {\small #1}\par
+\newcommand{\projectheading}[3]{%
+  \begin{tabularx}{\linewidth}{@{}X@{\hspace{1em}}r@{}}
+    \textbf{#1} $|$ \emph{#2} & {\small #3}
+  \end{tabularx}\vspace{-4pt}
 }
 
 \name{Shufan Shahi}
@@ -134,62 +135,66 @@ B.Sc. in Computer Science and Engineering
 
 \Needspace{13\baselineskip}
 \begin{rSection}{Projects}
-\textbf{Drone Vision} $|$ \emph{PyTorch, YOLOv11X, ByteTrack} \\
+\Needspace{8\baselineskip}
+\projectheading{Drone Vision}{PyTorch, YOLOv11X, ByteTrack}{%
+  \href{https://github.com/shufanshahi/droneVision}{\faGithub\ GitHub}%
+}
 \emph{Aerial human and vehicle detection, counting, and tracking pipeline.}
-\projectlinks{\faGithub\ \href{https://github.com/shufanshahi/droneVision}{GitHub repository}}
 \begin{itemize}
   \item Fine-tuned YOLOv11X on VisDrone with class-balanced training and tiled inference for small aerial objects.
   \item Implemented human counting and multi-object tracking using ByteTrack.
 \end{itemize}
 
-\textbf{BD Traffic Monitoring System} $|$ \emph{PyTorch, YOLO11L, Flask, Docker} \\
-\emph{Intelligent traffic analysis system tailored for Bangladesh road conditions.}
-\projectlinks{%
-  \faGithub\ \href{https://github.com/shufanshahi/bd-traffic-monitoring-system}{GitHub repository}
+\Needspace{7\baselineskip}
+\projectheading{BD Traffic Monitoring System}{PyTorch, YOLO11L, Flask, Docker}{%
+  \href{https://github.com/shufanshahi/bd-traffic-monitoring-system}{\faGithub\ GitHub}
   \quad
-  \faRocket\ \href{https://huggingface.co/spaces/shufanshahi/bd-traffic-monitoring-system}{Live demo}
+  \href{https://huggingface.co/spaces/shufanshahi/bd-traffic-monitoring-system}{\faRocket\ Live}%
 }
+\emph{Intelligent traffic analysis system tailored for Bangladesh road conditions.}
 \begin{itemize}
   \item Fine-tuned YOLO on Bangladesh traffic data to detect local vehicle types.
 \end{itemize}
 
-\textbf{Postfolio} $|$ \emph{Spring Boot, Next.js, Docker, RabbitMQ, Stripe} \\
-\emph{Empowering professionals to grow, connect, and showcase achievements.}
-\projectlinks{%
-  \faGithub\ \href{https://github.com/shufanshahi/Postfolio}{GitHub repository}
+\Needspace{7\baselineskip}
+\projectheading{Postfolio}{Spring Boot, Next.js, Docker, RabbitMQ, Stripe}{%
+  \href{https://github.com/shufanshahi/Postfolio}{\faGithub\ GitHub}
   \quad
-  \faYoutube\ \href{https://www.youtube.com/watch?v=U6N-ioqvg9c}{Demo video}
+  \href{https://www.youtube.com/watch?v=U6N-ioqvg9c}{\faYoutube\ Demo}%
 }
+\emph{Empowering professionals to grow, connect, and showcase achievements.}
 \begin{itemize}
   \item Combines social sharing, portfolio and CV generation, job searching, and AI-powered interview preparation.
 \end{itemize}
 
-\textbf{Redrick Routinson} $|$ \emph{Python, React, Flask, Firebase} \\
-\emph{A platform designed to simplify university life.}
-\projectlinks{%
-  \faGithub\ \href{https://github.com/shufanshahi/RedrickRoutinson}{GitHub repository}
+\Needspace{8\baselineskip}
+\projectheading{Redrick Routinson}{Python, React, Flask, Firebase}{%
+  \href{https://github.com/shufanshahi/RedrickRoutinson}{\faGithub\ GitHub}
   \quad
-  \faYoutube\ \href{https://www.youtube.com/watch?v=Fg-GkZrsIzw}{Demo video}
+  \href{https://www.youtube.com/watch?v=Fg-GkZrsIzw}{\faYoutube\ Demo}%
 }
+\emph{A platform designed to simplify university life.}
 \begin{itemize}
   \item Developed genetic algorithm-based scheduling and automated exam seat planning with QR attendance.
   \item Added class swapping, event management, forums, and lost-and-found features.
 \end{itemize}
 
-\textbf{Biztrack} $|$ \emph{Next.js, Node.js, PostgreSQL} \\
-\emph{Business analysis software for small and medium-sized enterprises.}
-\projectlinks{%
-  \faGithub\ \href{https://github.com/shufanshahi/biztrack}{GitHub repository}
+\Needspace{7\baselineskip}
+\projectheading{Biztrack}{Next.js, Node.js, PostgreSQL}{%
+  \href{https://github.com/shufanshahi/biztrack}{\faGithub\ GitHub}
   \quad
-  \faYoutube\ \href{https://www.youtube.com/watch?v=STNoXqq8kQM}{Demo video}
+  \href{https://www.youtube.com/watch?v=STNoXqq8kQM}{\faYoutube\ Demo}%
 }
+\emph{Business analysis software for small and medium-sized enterprises.}
 \begin{itemize}
   \item Implemented AI modules for real-time finance tracking, risk alerts, segmentation, and forecasting for intelligent business insights.
 \end{itemize}
 
-\textbf{Animeverse} $|$ \emph{Flutter, Firebase} \\
+\Needspace{7\baselineskip}
+\projectheading{Animeverse}{Flutter, Firebase}{%
+  \href{https://github.com/shufanshahi/animeverse}{\faGithub\ GitHub}%
+}
 \emph{Smart, AI-based anime recommendation system.}
-\projectlinks{\faGithub\ \href{https://github.com/shufanshahi/animeverse}{GitHub repository}}
 \begin{itemize}
   \item Enables users to discover shows based on their interests and interact with the application through an intelligent chatbot.
 \end{itemize}
@@ -225,6 +230,7 @@ B.Sc. in Computer Science and Engineering
 \end{itemize}
 \end{rSection}
 
+\Needspace{16\baselineskip}
 \begin{rSection}{Technical Skills}
 \textbf{Programming Languages:} Python, C++, Java \\
 \textbf{Data and Machine Learning:} PyTorch, TensorFlow, scikit-learn, NumPy, Pandas \\
