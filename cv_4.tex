@@ -9,6 +9,7 @@
 \documentclass{resume}
 
 \usepackage[dvipsnames]{xcolor}
+\definecolor{TitleColor}{HTML}{17324D}
 \usepackage{fontawesome5}
 \usepackage{enumitem}
 \usepackage{mathpazo}
@@ -18,8 +19,8 @@
 \usepackage{needspace}
 \usepackage[
   colorlinks=true,
-  urlcolor=RoyalPurple,
-  linkcolor=RoyalPurple,
+  urlcolor=TitleColor,
+  linkcolor=TitleColor,
   pdfauthor={Shufan Shahi},
   pdftitle={Shufan Shahi - Curriculum Vitae}
 ]{hyperref}
@@ -71,15 +72,15 @@
 \renewcommand{\printname}{%
   \begingroup
     \hfuzz=31pt
-    \hfil{\MakeUppercase{\namesize\bfseries\@name}}\hfil
+    \hfil{\color{TitleColor}\MakeUppercase{\namesize\bfseries\@name}}\hfil
     \nameskip\break
   \endgroup
 }
 \makeatother
 
 \titleformat{\section}
-  {\Large\bfseries\scshape}{}{0em}{\color{RoyalPurple}}
-  [\color{RoyalPurple}\titlerule]
+  {\Large\bfseries\scshape}{}{0em}{\color{TitleColor}}
+  [\color{TitleColor}\titlerule]
 \titlespacing*{\section}{0pt}{1.1em}{0.65em}
 
 \renewenvironment{rSection}[1]{
