@@ -40,6 +40,7 @@
 \newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
 \newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
 \newcommand{\projectheading}[4]{%
+  \Needspace{3\baselineskip}% Keep the heading with at least the first detail line.
   \begin{tabularx}{\linewidth}{@{}X@{\hspace{1em}}r@{}}
     \textbf{#1 - #2} $|$ \emph{#3} & {\small #4}
   \end{tabularx}\vspace{-4pt}
@@ -84,6 +85,7 @@
 \titlespacing*{\section}{0pt}{1.1em}{0.65em}
 
 \renewenvironment{rSection}[1]{
+  \Needspace{3\baselineskip}% Avoid an orphaned section title without reserving a large block.
   \section{#1}
   \begin{list}{}{
       \setlength{\leftmargin}{0.2em}
@@ -106,38 +108,55 @@
 B.Sc. in Computer Science and Engineering
 \begin{itemize}
   \item Current CGPA: 3.55
-  \item Relevant coursework: Data Structures and Algorithms, Machine Learning, Database Systems, and Computer Networks
+  \item Relevant coursework: Data Structures and Algorithms, Machine Learning, Deep Learning with CV, Database Systems, and Computer Networks
 \end{itemize}
 \end{rSection}
 
 \begin{rSection}{Experience}
-\textbf{Intern} \hfill \textbf{2025} \\
-\emph{Battery Low Interactive Ltd.}
+\textbf{Student Researcher} \hfill \textbf{2026--Present} \\
+\emph{Elite Research Lab}
 \begin{itemize}
-  \item Learned Flutter application development, REST API integration, and practical applications of fine-tuned machine learning models.
+  \item Support research projects through literature reviews, experiments, and analysis.
 \end{itemize}
+
+\textbf{Researcher} \hfill \textbf{2025--2026} \\
+\emph{IUT Computer Vision Lab}
+\begin{itemize}
+  \item Researched multimodal AI methods to improve integration and mitigate modality imbalance.
+\end{itemize}
+
 
 \textbf{Senior Executive} \hfill \textbf{2025--2026} \\
 \emph{Project Aero}
 \begin{itemize}
-  \item Led university drone development initiatives and contributed to international UAV competitions.
+  \item Contributed to drone R\&D by applying AI-based object tracking for international UAV competitions.
 \end{itemize}
+
+\textbf{Intern} \hfill \textbf{2025} \\
+\emph{Battery Low Interactive Ltd.}
+\begin{itemize}
+  \item Learned Flutter development, REST API integration, and applications of fine-tuned ML models.
+\end{itemize}
+
+
 \end{rSection}
 
-\begin{rSection}{Achievements}
+\begin{rSection}{Achievements, Awards and Scholarships}
 \begin{itemize}[leftmargin=*,label=$\bullet$]
+    \item \textbf{5th Place, VAND4 International Competition} \hfill \textbf{2026} \\
+  Zero-Shot Industrial Track; built a zero-shot computer vision pipeline for detecting anomalies in industrial images using foundation models.
+  
   \item \textbf{First Runner-up, IUT Coderush Hackathon} \hfill \textbf{2025} \\
   Built an application under tight deadlines in a fast-paced team.
-  \item \textbf{5th Place, VAND4 International Competition} \hfill \textbf{2026} \\
-  Zero-Shot Industrial Track; built a zero-shot computer vision pipeline for detecting anomalies in industrial images using foundation models.
-  \item \textbf{7th Place, BAIC Datathon} \hfill \textbf{2025} \\
+\item \textbf{7th Place, BAIC Datathon} \hfill \textbf{2025} \\
   Analyzed datasets using preprocessing, visualization, and modeling.
+\item \textbf{IUT Partial Scholarship} \hfill \textbf{2022} \\
+  Secured a partial scholarship covering all four years of B.Sc. studies.
+\item \textbf{Runner-up, State-Level Physics Olympiad} \hfill \textbf{2018}
 \end{itemize}
 \end{rSection}
 
-\Needspace{10\baselineskip}
 \begin{rSection}{Projects}
-\Needspace{6\baselineskip}
 \projectheading{Drone Vision}{Aerial Tracking}{PyTorch, YOLOv11X, ByteTrack}{%
   \href{https://github.com/shufanshahi/droneVision}{\faGithub\ GitHub}%
 }
@@ -146,7 +165,6 @@ B.Sc. in Computer Science and Engineering
   \item Implemented human counting and multi-object tracking using ByteTrack.
 \end{itemize}
 
-\Needspace{5\baselineskip}
 \projectheading{BD Traffic Monitoring System}{Traffic Analytics}{PyTorch, YOLO11L, Flask, Docker}{%
   \href{https://github.com/shufanshahi/bd-traffic-monitoring-system}{\faGithub\ GitHub}
   \quad
@@ -156,7 +174,6 @@ B.Sc. in Computer Science and Engineering
   \item Fine-tuned YOLO on Bangladesh traffic data to detect local vehicle types.
 \end{itemize}
 
-\Needspace{5\baselineskip}
 \projectheading{Postfolio}{Professional Networking}{Spring Boot, Next.js, Docker, RabbitMQ, Stripe}{%
   \href{https://github.com/shufanshahi/Postfolio}{\faGithub\ GitHub}
   \quad
@@ -166,7 +183,6 @@ B.Sc. in Computer Science and Engineering
   \item Combines social sharing, portfolio and CV generation, job searching, and AI-powered interview preparation.
 \end{itemize}
 
-\Needspace{4\baselineskip}
 \projectheading{Redrick Routinson}{Campus Automation}{Python, React, Flask, Firebase}{%
   \href{https://github.com/shufanshahi/RedrickRoutinson}{\faGithub\ GitHub}
   \quad
@@ -177,7 +193,6 @@ B.Sc. in Computer Science and Engineering
   \item Added class swapping, event management, forums, and lost-and-found features.
 \end{itemize}
 
-\Needspace{5\baselineskip}
 \projectheading{Biztrack}{Business Analytics}{Next.js, Node.js, PostgreSQL}{%
   \href{https://github.com/shufanshahi/biztrack}{\faGithub\ GitHub}
   \quad
@@ -187,7 +202,6 @@ B.Sc. in Computer Science and Engineering
   \item Implemented AI modules for real-time finance tracking, risk alerts, segmentation, and forecasting for intelligent business insights.
 \end{itemize}
 
-\Needspace{4\baselineskip}
 \projectheading{Animeverse}{Anime Recommendations}{Flutter, Firebase}{%
   \href{https://github.com/shufanshahi/animeverse}{\faGithub\ GitHub}%
 }
@@ -196,29 +210,29 @@ B.Sc. in Computer Science and Engineering
 \end{itemize}
 \end{rSection}
 
-\Needspace{12\baselineskip}
 \begin{rSection}{Research Experience}
+\Needspace{3\baselineskip}
 \textbf{Visual Anomaly Detection Using DINOv2 Patch Embeddings} \hfill \textbf{2026}
 \begin{itemize}
   \item Extracted patch-level representations from images using pretrained DINOv2 encoders.
   \item Localized anomalous regions by comparing test-image embeddings with representations from normal reference images.
 \end{itemize}
 
-\Needspace{8\baselineskip}
+\Needspace{3\baselineskip}
 \textbf{Multimodal Emotion Recognition Using Graph Neural Networks} \hfill \textbf{2026}
 \begin{itemize}
   \item Built a multimodal emotion recognition pipeline using hypergraph neural networks to model higher-order cross-modal relationships.
   \item Integrated frequency-domain representations to mitigate modality imbalance and improve cross-modal feature fusion.
 \end{itemize}
 
-\Needspace{8\baselineskip}
+\Needspace{3\baselineskip}
 \textbf{Bangla--English Cross-Lingual News Retrieval} \hfill \textbf{2025}
 \begin{itemize}
   \item Developed a hybrid CLIR pipeline combining lexical, fuzzy, and embedding-based retrieval.
   \item Supported cross-lingual and code-switched queries through semantic relevance ranking.
 \end{itemize}
 
-\Needspace{8\baselineskip}
+\Needspace{3\baselineskip}
 \textbf{Weakly Supervised NER with Sparse CHMM and BERT} \hfill \textbf{2025}
 \begin{itemize}
   \item Combined noisy labeling functions to train without manually annotated ground truth.
@@ -226,17 +240,14 @@ B.Sc. in Computer Science and Engineering
 \end{itemize}
 \end{rSection}
 
-\Needspace{13\baselineskip}
 \begin{rSection}{Technical Skills}
 \textbf{Programming Languages:} Python, C++, Java \\
 \textbf{Data and Machine Learning:} PyTorch, TensorFlow, scikit-learn, NumPy, Pandas \\
-\textbf{Databases:} MySQL, Oracle SQL, MongoDB, Firebase, PostgreSQL \\
-\textbf{Web Development:} HTML, CSS, JavaScript, React, Tailwind CSS, Next.js, Spring Boot \\
+\textbf{Databases:} MySQL, Firebase, PostgreSQL \\
+\textbf{Web Development:} React, Tailwind CSS, Next.js, Spring Boot \\
 \textbf{Mobile Development:} React Native, Flutter \\
 \textbf{Visualization:} Matplotlib, Seaborn \\
-\textbf{Development Tools:} Git, Linux, JavaFX, Swing, REST APIs, Figma, Jupyter \\
-\textbf{IDEs and Platforms:} VS Code, IntelliJ IDEA, Scene Builder, Kaggle, Google Cloud Platform \\
-\textbf{Soft Skills:} Communication, teamwork, problem-solving
+\textbf{Development Tools:} Git, Linux \\
 \end{rSection}
 
 \begin{rSection}{Languages}
