@@ -14,10 +14,10 @@
 %% ---------- Colour palette (restrained, two inks) ----------
 \usepackage[dvipsnames]{xcolor}
 \definecolor{Ink}{HTML}{0D141C}   % headings / name
-\definecolor{Body}{HTML}{1C242D}  % body text
-\definecolor{Muted}{HTML}{4E5A67} % dates, meta, separators
-\definecolor{Hair}{HTML}{A6B0BA}  % hairlines
-\definecolor{Accent}{HTML}{1B4B7D}% links, subtle emphasis
+\definecolor{Body}{HTML}{0D141C}  % body text
+\definecolor{Muted}{HTML}{3A4551} % dates, meta, separators
+\definecolor{Hair}{HTML}{8C98A4}  % hairlines
+\definecolor{Accent}{HTML}{143C66}% links, subtle emphasis
 
 %% ---------- Page ----------
 \usepackage[left=0.60in,right=0.60in,top=0.45in,bottom=0.40in]{geometry}
@@ -45,7 +45,7 @@
 }
 
 %% ---------- Building blocks ----------
-\newcommand{\hair}{{\color{Ink}\hrule height 0.9pt}}
+\newcommand{\hair}{{\color{Ink}\hrule height 1.1pt}}
 
 \newcommand{\cvsection}[1]{%
   \vspace{9.5pt}%
@@ -56,7 +56,7 @@
 % \entry{left}{right}
 \newcommand{\entry}[2]{%
   \begin{tabularx}{\linewidth}{@{}X@{\hspace{1em}}r@{}}
-    #1 & {\fontsize{9.3pt}{10pt}\selectfont\color{Muted}#2}
+    #1 & {\fontsize{9.3pt}{10pt}\selectfont\bfseries\color{Ink}#2}
   \end{tabularx}\par}
 
 \newcommand{\dividerdot}{\,\textcolor{Muted}{\raisebox{0.15ex}{\scriptsize$\bullet$}}\,}
@@ -89,10 +89,9 @@
 \begin{center}
   {\fontsize{26pt}{27pt}\selectfont\bfseries\color{Ink}\textls[120]{SHUFAN SHAHI}}\par
   \vspace{4pt}
-  {\fontsize{9.6pt}{11pt}\selectfont\color{Muted}\textls[140]{\MakeUppercase{Computer Science and Engineering}}}\par
+  {\fontsize{9.6pt}{11pt}\selectfont\color{Muted}\textls[140]{\MakeUppercase{Dhaka, Bangladesh}}}\par
   \vspace{7pt}
   {\fontsize{9.1pt}{11pt}\selectfont\color{Body}
-    \textcolor{Muted}{\faMapMarker*}\, Dhaka, Bangladesh \dividerdot
     \textcolor{Muted}{\faPhone*}\, \href{tel:+8801990935044}{+880 1990-935044} \dividerdot
     \textcolor{Muted}{\faEnvelope}\, \href{mailto:shufanshahi@gmail.com}{shufanshahi@gmail.com} \dividerdot
     \textcolor{Muted}{\faGithub}\, \href{https://github.com/shufanshahi}{shufanshahi} \dividerdot
@@ -122,7 +121,7 @@
 {Learned Flutter development, REST API integration, and applications of fine-tuned ML models.}
 
 %% ---------- Projects ----------
-\cvsection{Selected Projects}
+\cvsection{Projects}
 \project{Postfolio}{Professional Networking}{Spring Boot \dividerdot Next.js \dividerdot Docker \dividerdot RabbitMQ \dividerdot Stripe}{%
   \href{https://github.com/shufanshahi/Postfolio}{\faGithub\ Code}\enspace
   \href{https://www.youtube.com/watch?v=U6N-ioqvg9c}{\faPlayCircle\ Demo}}
@@ -152,7 +151,7 @@
 {Recommends anime by user interest and supports discovery through an intelligent chatbot.}
 
 %% ---------- Awards ----------
-\cvsection{Achievements, Awards and Scholarships}
+\cvsection{Achievements}
 \award{5th Place, VAND4 International Competition}{Zero-shot industrial track; foundation-model anomaly detection}{2026}
 \award{First Runner-up, IUT Coderush Hackathon}{Rapid team application development}{2025}
 \award{7th Place, BAIC Datathon}{Data preprocessing, visualization, and modeling}{2025}
