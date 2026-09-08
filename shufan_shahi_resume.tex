@@ -1,142 +1,170 @@
+%% ============================================================
+%%  Shufan Shahi — Curriculum Vitae
+%%  Minimal, modern, single-page layout (pdfLaTeX)
+%% ============================================================
 \documentclass[10pt,letterpaper]{article}
 
+%% ---------- Fonts ----------
 \usepackage[T1]{fontenc}
-\usepackage[scaled=0.96]{helvet}
-\renewcommand{\familydefault}{\sfdefault}
-\usepackage[dvipsnames]{xcolor}
-\definecolor{TitleColor}{HTML}{17324D}
-\definecolor{RuleColor}{HTML}{7890A5}
+\usepackage[utf8]{inputenc}
+\usepackage[default,semibold,scale=1.0]{sourcesanspro}
+\usepackage[tracking=true,protrusion=true,expansion=true]{microtype}
 \usepackage{fontawesome5}
+
+%% ---------- Colour palette (restrained, two inks) ----------
+\usepackage[dvipsnames]{xcolor}
+\definecolor{Ink}{HTML}{0D141C}   % headings / name
+\definecolor{Body}{HTML}{1C242D}  % body text
+\definecolor{Muted}{HTML}{4E5A67} % dates, meta, separators
+\definecolor{Hair}{HTML}{A6B0BA}  % hairlines
+\definecolor{Accent}{HTML}{1B4B7D}% links, subtle emphasis
+
+%% ---------- Page ----------
+\usepackage[left=0.60in,right=0.60in,top=0.45in,bottom=0.40in]{geometry}
 \usepackage{enumitem}
 \usepackage{tabularx}
 \usepackage{array}
-\usepackage{microtype}
-\usepackage[left=0.46in,top=0.38in,right=0.46in,bottom=0.38in]{geometry}
 \usepackage[
   colorlinks=true,
-  urlcolor=TitleColor,
-  linkcolor=TitleColor,
+  urlcolor=Accent,
+  linkcolor=Accent,
   pdfauthor={Shufan Shahi},
-  pdftitle={Shufan Shahi - Curriculum Vitae}
+  pdftitle={Shufan Shahi — Curriculum Vitae}
 ]{hyperref}
 
 \pagestyle{empty}
 \urlstyle{same}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt}
+\setlength{\tabcolsep}{0pt}
+\color{Body}
+
 \setlist[itemize]{
-  leftmargin=1.15em,
-  labelsep=0.4em,
-  itemsep=0pt,
-  topsep=0pt,
-  parsep=0pt,
-  partopsep=0pt
+  leftmargin=0.95em, labelsep=0.45em, label=\textcolor{Muted}{\rule[0.22em]{0.42em}{0.8pt}},
+  itemsep=1pt, topsep=1.5pt, parsep=0pt, partopsep=0pt
 }
+
+%% ---------- Building blocks ----------
+\newcommand{\hair}{{\color{Ink}\hrule height 0.9pt}}
 
 \newcommand{\cvsection}[1]{%
-  \vspace{9pt}%
-  {\fontsize{13pt}{14pt}\selectfont\bfseries\color{TitleColor}\MakeUppercase{#1}}\par
-  \vspace{2pt}{\color{RuleColor}\hrule height 0.6pt}\vspace{5pt}%
+  \vspace{9.5pt}%
+  {\fontsize{9.5pt}{10pt}\selectfont\bfseries\color{Ink}\textls[180]{\MakeUppercase{#1}}}\par
+  \vspace{3pt}\hair\vspace{5pt}%
 }
 
+% \entry{left}{right}
+\newcommand{\entry}[2]{%
+  \begin{tabularx}{\linewidth}{@{}X@{\hspace{1em}}r@{}}
+    #1 & {\fontsize{9.3pt}{10pt}\selectfont\color{Muted}#2}
+  \end{tabularx}\par}
+
+\newcommand{\dividerdot}{\,\textcolor{Muted}{\raisebox{0.15ex}{\scriptsize$\bullet$}}\,}
+
+% \role{title}{organisation}{dates}{description}
 \newcommand{\role}[4]{%
-  \begin{tabularx}{\linewidth}{@{}X@{\hspace{0.8em}}r@{}}
-    \textbf{#1} \textcolor{RuleColor}{|} \textit{#2} & \textbf{#3}
-  \end{tabularx}\vspace{-2.5pt}
-  \begin{itemize}\item #4\end{itemize}\vspace{4pt}%
-}
+  \entry{\textbf{\color{Ink}#1}\hspace{0.45em}\textcolor{Muted}{\rule[-0.05em]{0.7pt}{0.9em}}\hspace{0.45em}\textcolor{Accent}{#2}}{#3}%
+  \vspace{1pt}
+  \begin{itemize}\item #4\end{itemize}\vspace{4.5pt}}
 
+% \project{name}{domain}{stack}{links}{description}
 \newcommand{\project}[5]{%
-  \begin{tabularx}{\linewidth}{@{}X@{\hspace{0.8em}}r@{}}
-    \textbf{#1} -- #2 & {\small #4}
-  \end{tabularx}\vspace{-2pt}
-  {\small\color{TitleColor}\textit{#3}}\par\vspace{0.5pt}
-  \begin{itemize}\item #5\end{itemize}\vspace{4pt}%
-}
+  \entry{\textbf{\color{Ink}#1}\hspace{0.45em}\textcolor{Muted}{\rule[-0.05em]{0.7pt}{0.9em}}\hspace{0.45em}#2}{#4}%
+  \vspace{0.5pt}
+  {\fontsize{9.3pt}{10.5pt}\selectfont\color{Muted}#3}\par
+  \vspace{1pt}
+  \begin{itemize}\item #5\end{itemize}\vspace{4.5pt}}
 
+% \award{title}{detail}{year}
 \newcommand{\award}[3]{%
-  \begin{tabularx}{\linewidth}{@{}X@{\hspace{0.8em}}r@{}}
-    \textbullet\enspace\textbf{#1} -- #2 & \textbf{#3}
-  \end{tabularx}\vspace{-1pt}%
-}
+  \entry{\textbf{\color{Ink}#1}\hspace{0.4em}\textcolor{Muted}{#2}}{#3}\vspace{3pt}}
+
+% \sk{label} -- skills-table row label
+\newcommand{\sk}[1]{\textbf{\color{Ink}#1}}
 
 \begin{document}
-\fontsize{10.75pt}{13pt}\selectfont
+\fontsize{9.9pt}{12.3pt}\selectfont
 
+%% ---------- Header ----------
 \begin{center}
-  {\fontsize{25pt}{26pt}\selectfont\bfseries\color{TitleColor}SHUFAN SHAHI}\par
-  \vspace{2pt}
-  {\fontsize{9.8pt}{11pt}\selectfont
-    \faMapMarker*\ Dhaka, Bangladesh \quad
-    \faPhone\ \href{tel:+8801990935044}{+880 1990-935044} \quad
-    \faEnvelope\ \href{mailto:shufanshahi@gmail.com}{shufanshahi@gmail.com}
-  }\par
-  \vspace{1.5pt}
-  {\fontsize{9.8pt}{11pt}\selectfont
-    \faGithub\ \href{https://github.com/shufanshahi}{github.com/shufanshahi} \quad
-    \faLinkedin\ \href{https://www.linkedin.com/in/shahi-shufan-680135289/}{linkedin.com/in/shahi-shufan} \quad
-    \faGlobe\ \href{https://shufanshahi.github.io/}{shufanshahi.github.io}
+  {\fontsize{26pt}{27pt}\selectfont\bfseries\color{Ink}\textls[120]{SHUFAN SHAHI}}\par
+  \vspace{4pt}
+  {\fontsize{9.6pt}{11pt}\selectfont\color{Muted}\textls[140]{\MakeUppercase{Computer Science and Engineering}}}\par
+  \vspace{7pt}
+  {\fontsize{9.1pt}{11pt}\selectfont\color{Body}
+    \textcolor{Muted}{\faMapMarker*}\, Dhaka, Bangladesh \dividerdot
+    \textcolor{Muted}{\faPhone*}\, \href{tel:+8801990935044}{+880 1990-935044} \dividerdot
+    \textcolor{Muted}{\faEnvelope}\, \href{mailto:shufanshahi@gmail.com}{shufanshahi@gmail.com} \dividerdot
+    \textcolor{Muted}{\faGithub}\, \href{https://github.com/shufanshahi}{shufanshahi} \dividerdot
+    \textcolor{Muted}{\faLinkedin}\, \href{https://www.linkedin.com/in/shahi-shufan-680135289/}{shahi-shufan} \dividerdot
+    \textcolor{Muted}{\faGlobe}\, \href{https://shufanshahi.github.io/}{shufanshahi.github.io}
   }
 \end{center}
-\vspace{-6pt}
+\vspace{6pt}
+\hair
 
+%% ---------- Education ----------
 \cvsection{Education}
-\begin{tabularx}{\linewidth}{@{}Xr@{}}
-  \textbf{Islamic University of Technology} & \textbf{2022--Present} \\
-  B.Sc. in Computer Science and Engineering & \textbf{CGPA: 3.55}
-\end{tabularx}\vspace{-1pt}
-\textbf{Coursework:} Data Structures and Algorithms, Machine Learning, Deep Learning with CV, Database Systems, Computer Networks
+\entry{\textbf{\color{Ink}Islamic University of Technology}}{2022 -- Present}
+\entry{B.Sc. in Computer Science and Engineering}{CGPA 3.55 / 4.00}
+\vspace{3pt}
+{\fontsize{9.1pt}{11.5pt}\selectfont\color{Muted}\textbf{Coursework}\hspace{0.5em} Data Structures and Algorithms \dividerdot Machine Learning \dividerdot Deep Learning and Vision \dividerdot Database Systems \dividerdot Computer Networks}
 
+%% ---------- Experience ----------
 \cvsection{Experience}
-\role{Student Researcher}{Elite Research Lab}{2026--Present}{Support research projects through literature reviews, experiments, and analysis.}
-\role{Senior Executive}{Project Aero}{2025--2026}{Led university drone development initiatives and contributed to international UAV competitions.}
-\role{Intern}{Battery Low Interactive Ltd.}{2025}{Learned Flutter development, REST API integration, and applications of fine-tuned ML models.}
+\role{Student Researcher}{Elite Research Lab}{2026 -- Present}
+{Support research projects through literature reviews, experiments, and analysis.}
 
-\cvsection{Projects}
-\project{Postfolio}{Professional Networking}{Spring Boot, Next.js, Docker, RabbitMQ, Stripe}{%
-  \href{https://github.com/shufanshahi/Postfolio}{\faGithub\ GitHub}\enspace
-  \href{https://www.youtube.com/watch?v=U6N-ioqvg9c}{\faYoutube\ Demo}%
-}{Integrates social networking, portfolio and CV creation, job search, and AI interview preparation.}
+\role{Senior Executive}{Project Aero}{2025 -- 2026}
+{Led university drone development initiatives and contributed to international UAV competitions.}
 
-\project{Redrick Routinson}{Campus Automation}{Python, React, Flask, Firebase}{%
-  \href{https://github.com/shufanshahi/RedrickRoutinson}{\faGithub\ GitHub}\enspace
-  \href{https://www.youtube.com/watch?v=Fg-GkZrsIzw}{\faYoutube\ Demo}%
-}{Built genetic-algorithm scheduling, QR exam attendance, class swaps, events, forums, and lost-and-found.}
+\role{Intern}{Battery Low Interactive Ltd.}{2025}
+{Learned Flutter development, REST API integration, and applications of fine-tuned ML models.}
 
-\project{Biztrack}{Business Analytics}{Next.js, Node.js, PostgreSQL}{%
-  \href{https://github.com/shufanshahi/biztrack}{\faGithub\ GitHub}\enspace
-  \href{https://www.youtube.com/watch?v=STNoXqq8kQM}{\faYoutube\ Demo}%
-}{Built AI modules for real-time finance tracking, risk alerts, customer segmentation, and forecasting.}
+%% ---------- Projects ----------
+\cvsection{Selected Projects}
+\project{Postfolio}{Professional Networking}{Spring Boot \dividerdot Next.js \dividerdot Docker \dividerdot RabbitMQ \dividerdot Stripe}{%
+  \href{https://github.com/shufanshahi/Postfolio}{\faGithub\ Code}\enspace
+  \href{https://www.youtube.com/watch?v=U6N-ioqvg9c}{\faPlayCircle\ Demo}}
+{Integrates social networking, portfolio and CV creation, job search, and AI interview preparation.}
 
-\project{Drone Vision}{Aerial Tracking}{PyTorch, YOLOv11X, ByteTrack}{%
-  \href{https://github.com/shufanshahi/droneVision}{\faGithub\ GitHub}%
-}{Fine-tuned YOLOv11X on VisDrone and used ByteTrack for human counting and multi-object tracking.}
+\project{Redrick Routinson}{Campus Automation}{Python \dividerdot React \dividerdot Flask \dividerdot Firebase}{%
+  \href{https://github.com/shufanshahi/RedrickRoutinson}{\faGithub\ Code}\enspace
+  \href{https://www.youtube.com/watch?v=Fg-GkZrsIzw}{\faPlayCircle\ Demo}}
+{Built genetic-algorithm scheduling, QR exam attendance, class swaps, events, forums, and lost-and-found.}
 
-\project{BD Traffic Monitoring System}{Traffic Analytics}{PyTorch, YOLO11L, Flask, Docker}{%
-  \href{https://github.com/shufanshahi/bd-traffic-monitoring-system}{\faGithub\ GitHub}\enspace
-  \href{https://huggingface.co/spaces/shufanshahi/bd-traffic-monitoring-system}{\faRocket\ Live}%
-}{Fine-tuned YOLO on Bangladesh traffic data to detect local vehicle types.}
+\project{Biztrack}{Business Analytics}{Next.js \dividerdot Node.js \dividerdot PostgreSQL}{%
+  \href{https://github.com/shufanshahi/biztrack}{\faGithub\ Code}\enspace
+  \href{https://www.youtube.com/watch?v=STNoXqq8kQM}{\faPlayCircle\ Demo}}
+{Built AI modules for real-time finance tracking, risk alerts, customer segmentation, and forecasting.}
 
-\project{Animeverse}{Anime Recommendations}{Flutter, Firebase}{%
-  \href{https://github.com/shufanshahi/animeverse}{\faGithub\ GitHub}%
-}{Recommends anime by user interest and supports discovery through an intelligent chatbot.}
+\project{Drone Vision}{Aerial Tracking}{PyTorch \dividerdot YOLOv11X \dividerdot ByteTrack}{%
+  \href{https://github.com/shufanshahi/droneVision}{\faGithub\ Code}}
+{Fine-tuned YOLOv11X on VisDrone and used ByteTrack for human counting and multi-object tracking.}
 
+\project{BD Traffic Monitoring System}{Traffic Analytics}{PyTorch \dividerdot YOLO11L \dividerdot Flask \dividerdot Docker}{%
+  \href{https://github.com/shufanshahi/bd-traffic-monitoring-system}{\faGithub\ Code}\enspace
+  \href{https://huggingface.co/spaces/shufanshahi/bd-traffic-monitoring-system}{\faRocket\ Live}}
+{Fine-tuned YOLO on Bangladesh traffic data to detect local vehicle types.}
+
+\project{Animeverse}{Anime Recommendations}{Flutter \dividerdot Firebase}{%
+  \href{https://github.com/shufanshahi/animeverse}{\faGithub\ Code}}
+{Recommends anime by user interest and supports discovery through an intelligent chatbot.}
+
+%% ---------- Awards ----------
 \cvsection{Achievements, Awards and Scholarships}
-\award{5th Place, VAND4 International Competition}{Zero-Shot Industrial Track; foundation-model anomaly detection}{2026}
+\award{5th Place, VAND4 International Competition}{Zero-shot industrial track; foundation-model anomaly detection}{2026}
 \award{First Runner-up, IUT Coderush Hackathon}{Rapid team application development}{2025}
 \award{7th Place, BAIC Datathon}{Data preprocessing, visualization, and modeling}{2025}
 
+%% ---------- Skills ----------
 \cvsection{Technical Skills}
-{\renewcommand{\arraystretch}{1.18}%
-\begin{tabularx}{\linewidth}{@{}X@{\hspace{2em}}X@{}}
-  \textbf{Programming}\newline Python, C++, Java &
-  \textbf{Machine Learning}\newline PyTorch, TensorFlow, scikit-learn \\
-  \textbf{Data and Visualization}\newline NumPy, Pandas, Matplotlib, Seaborn &
-  \textbf{Databases}\newline MySQL, Firebase, PostgreSQL \\
-  \textbf{Web Development}\newline React, Tailwind CSS, Next.js, Spring Boot &
-  \textbf{Mobile Development}\newline React Native, Flutter \\
-  \textbf{Development Tools}\newline Git, Linux &
-  \textbf{Languages}\newline English, Bangla
+{\renewcommand{\arraystretch}{1.35}\fontsize{9.6pt}{11.5pt}\selectfont
+\begin{tabularx}{\linewidth}{@{}l@{\hspace{0.9em}}X@{\hspace{1.6em}}l@{\hspace{0.9em}}X@{}}
+  \sk{Programming} & Python, C++, Java & \sk{Machine Learning} & PyTorch, TensorFlow, scikit-learn \\
+  \sk{Data and Visualization} & NumPy, Pandas, Matplotlib, Seaborn & \sk{Databases} & MySQL, PostgreSQL, Firebase \\
+  \sk{Web Development} & React, Next.js, Tailwind CSS, Spring Boot & \sk{Mobile Development} & Flutter, React Native \\
+  \sk{Tools and Platforms} & Git, Docker, Linux & \sk{Languages} & English, Bangla
 \end{tabularx}}
 
 \end{document}
