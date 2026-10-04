@@ -106,7 +106,7 @@
 
 \begin{rSection}{Education}
 \textbf{Islamic University of Technology} \hfill \textbf{2022--2026} \\
-B.Sc. in Computer Science and Engineering \hfill \textbf{CGPA: 3.55} \\
+B.Sc. in Computer Science and Engineering \hfill \textbf{CGPA: 3.58} \\
 Coursework: Algorithms, Machine Learning, Deep Learning, Databases, and Networks.
 
 \textbf{Chuadanga Govt. College} \hfill \textbf{2021} \\
@@ -148,12 +148,28 @@ Higher Secondary Certificate (HSC) \hfill \textbf{GPA: 5.00/5.00}
 \Needspace{6\baselineskip}
 \begin{rSection}{Projects}
 
-\projectheading{DocuMind}{RAG Document Q\&A Assistant}{Python, LangChain, LlamaIndex, ChromaDB, Ollama}{%
+\projectheading{DocuMind}{Document Q\&A}{Python, LangChain, LlamaIndex, ChromaDB, Ollama}{%
   \href{https://github.com/shufanshahi/DocuMind}{\faGithub\ GitHub}%
 }
 \begin{itemize}
   \item Built a local RAG system for documents with cited answers and hallucination guardrails.
   \item Compared 4 chunking methods and 2 embedding models; added hybrid BM25 and reranking.
+\end{itemize}
+
+\projectheading{Benhallu}{Bengali Hallucination Detection}{Python, RAG, BanglaBERT, scikit-learn}{%
+  \href{https://github.com/shufanshahi/Benhallu}{\faGithub\ GitHub}%
+}
+\begin{itemize}
+  \item Built a retrieval-augmented pipeline to verify Bengali answers against supplied context or a Bengali QA knowledge base.
+  \item Created a hallucination dataset and used fine-tuned BanglaBERT with answer-comparison features to classify responses.
+\end{itemize}
+
+\projectheading{Bengali Speaker Diarization}{Speaker Turn Detection}{PyTorch, Silero VAD, ECAPA-TDNN}{%
+  \href{https://github.com/shufanshahi/Bengali-Speaker-Diarization}{\faGithub\ GitHub}%
+}
+\begin{itemize}
+  \item Built a pipeline using neural voice activity detection, speaker embeddings, and agglomerative clustering to label timestamped speaker turns.
+  \item Estimated speaker counts with silhouette scores and exported diarization results to CSV.
 \end{itemize}
 
 \projectheading{Drone Vision}{Aerial Tracking}{PyTorch, YOLOv11X, ByteTrack}{%
