@@ -3,7 +3,7 @@
 % LaTeX Template
 % Version 2.0 (8/5/13)
 %
-% Content adapted from main.tex while retaining the cv_4.tex layout.
+% Tailored for: AI/ML Engineer, Engineering Department
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \documentclass{resume}
@@ -100,31 +100,26 @@
 \begin{document}
 \fontsize{11.5pt}{14pt}\selectfont
 
-% \begin{rSection}{Professional Profile}
-% Computer Science undergraduate with hands-on experience in data analysis, machine learning, and full-stack development. Built web and mobile applications using React, Node.js, and Firebase. Skilled in relational databases, API integration, and delivering real-world solutions through hackathons and academic projects.
-% \end{rSection}
+\begin{rSection}{About}
+AI/ML engineer and CSE undergraduate (IUT, 2026) who takes models from data analysis and experimentation to production APIs. Currently an AI Engineer at GLiTch LABS, building, evaluating, and deploying ML and LLM systems, including RAG with embeddings and reranking, search and ranking, forecasting, customer segmentation, risk alerting, and GA-based optimization. Strong in Python, PyTorch, TensorFlow, Pandas, NumPy, and SQL, with research experience in multimodal learning, NLP, and computer vision, and a top-5 finish in an international anomaly-detection competition. Comfortable with REST services, Docker, Git, and Linux; works independently and with backend and product teams. Based in Dhaka and available for full-time, on-site work.
+\end{rSection}
 
 \begin{rSection}{Education}
 \textbf{Islamic University of Technology} \hfill \textbf{2022--2026} \\
 B.Sc. in Computer Science and Engineering \hfill \textbf{CGPA: 3.58} \\
-Coursework: Algorithms, Machine Learning, Deep Learning, Databases, and Networks.
+Coursework: Algorithms, Databases, Networks, Machine Learning, and Deep Learning.
 
 \textbf{Chuadanga Govt. College} \hfill \textbf{2021} \\
 Higher Secondary Certificate (HSC) \hfill \textbf{GPA: 5.00/5.00}
 \end{rSection}
-
 \begin{rSection}{Experience}
 
-\textbf{AI Engineer} \hfill \textbf{2026--Present} \\
+\textbf{AI Engineer} \hfill \textbf{2025--Present} \\
 \emph{GLiTch LABS}
 \begin{itemize}
-  \item Built RAG architectures, connecting LLMs to vector databases for optimized semantic search.
-\end{itemize}
-
-\textbf{Student Researcher} \hfill \textbf{2026} \\
-\emph{Elite Research Lab}
-\begin{itemize}
-  \item Support research projects through literature reviews, experiments, and analysis.
+  \item Design, train, fine-tune, and evaluate ML and LLM-based features in Python (PyTorch, TensorFlow), taking prototypes through experimentation to production-ready services.
+  \item Build RAG and retrieval pipelines with embeddings, vector databases, and reranking, and serve models through backend REST APIs integrated with client applications.
+  \item Prepare datasets, run feature engineering and data analysis with Pandas, NumPy, and SQL, and debug model and pipeline issues with backend engineers and product teams.
 \end{itemize}
 
 \textbf{Intern} \hfill \textbf{2025} \\
@@ -133,27 +128,47 @@ Higher Secondary Certificate (HSC) \hfill \textbf{GPA: 5.00/5.00}
   \item Learned Flutter development, REST API integration, and applications of fine-tuned ML models.
 \end{itemize}
 
-\textbf{Researcher} \hfill \textbf{2025--2026} \\
-\emph{IUT Computer Vision Lab}
-\begin{itemize}
-  \item Researched multimodal AI methods to improve integration and mitigate modality imbalance.
-\end{itemize}
-
-
 \textbf{Senior Executive} \hfill \textbf{2025--2026} \\
 \emph{Project Aero}
 \begin{itemize}
   \item Contributed to drone R\&D by applying AI-based object tracking for international UAV competitions.
 \end{itemize}
 
+\textbf{Researcher} \hfill \textbf{2025--2026} \\
+\emph{IUT Computer Vision Lab}
+\begin{itemize}
+  \item Researched multimodal AI methods to improve integration and mitigate modality imbalance.
+\end{itemize}
 
+\textbf{Student Researcher} \hfill \textbf{2026} \\
+\emph{Elite Research Lab}
+\begin{itemize}
+  \item Support research projects through literature reviews, experiments, and analysis.
+\end{itemize}
 
 \end{rSection}
 
-
-
 \Needspace{6\baselineskip}
 \begin{rSection}{Projects}
+
+\projectheading{Biztrack}{Business Analytics}{Next.js, Node.js, PostgreSQL}{%
+  \href{https://github.com/shufanshahi/biztrack}{\faGithub\ GitHub}
+  \quad
+  \href{https://www.youtube.com/watch?v=STNoXqq8kQM}{\faYoutube\ Demo}%
+}
+\begin{itemize}
+  \item Built full-stack AI modules for forecasting, customer segmentation, and risk alerts on transactional data, backed by PostgreSQL and served through APIs.
+\end{itemize}
+
+\projectheading{Postfolio}{Professional Networking Platform}{Spring Boot, Next.js, Docker, RabbitMQ, Stripe}{%
+  \href{https://github.com/shufanshahi/Postfolio}{\faGithub\ GitHub}
+  \quad
+  \href{https://www.youtube.com/watch?v=U6N-ioqvg9c}{\faYoutube\ Demo}%
+}
+\begin{itemize}
+  \item Built a containerized full-stack platform with Spring Boot backend services, RabbitMQ messaging, and Stripe payments.
+  \item Built an AI matching engine that ranks candidates against job postings to surface the best-fit hires, alongside portfolio and CV creation, job search, and AI interview preparation.
+\end{itemize}
 
 \projectheading{DocuMind}{Document Q\&A}{Python, LangChain, LlamaIndex, ChromaDB, Ollama}{%
   \href{https://github.com/shufanshahi/DocuMind}{\faGithub\ GitHub}%
@@ -171,12 +186,13 @@ Higher Secondary Certificate (HSC) \hfill \textbf{GPA: 5.00/5.00}
   \item Created a hallucination dataset and used fine-tuned BanglaBERT with answer-comparison features to classify responses.
 \end{itemize}
 
-\projectheading{Bengali Speaker Diarization}{Speaker Turn Detection}{PyTorch, Silero VAD, ECAPA-TDNN}{%
-  \href{https://github.com/shufanshahi/Bengali-Speaker-Diarization}{\faGithub\ GitHub}%
+\projectheading{Redrick Routinson}{Campus Automation}{Python, React, Flask, Firebase}{%
+  \href{https://github.com/shufanshahi/RedrickRoutinson}{\faGithub\ GitHub}
+  \quad
+  \href{https://www.youtube.com/watch?v=Fg-GkZrsIzw}{\faYoutube\ Demo}%
 }
 \begin{itemize}
-  \item Built a pipeline using neural voice activity detection, speaker embeddings, and agglomerative clustering to label timestamped speaker turns.
-  \item Estimated speaker counts with silhouette scores and exported diarization results to CSV.
+  \item Built genetic-algorithm scheduling optimization, QR exam attendance, class swapping, events, forums, and lost-and-found.
 \end{itemize}
 
 \projectheading{Drone Vision}{Aerial Tracking}{PyTorch, YOLOv11X, ByteTrack}{%
@@ -186,86 +202,30 @@ Higher Secondary Certificate (HSC) \hfill \textbf{GPA: 5.00/5.00}
   \item Fine-tuned YOLOv11X on VisDrone and used ByteTrack for human counting and multi-object tracking.
 \end{itemize}
 
-% \projectheading{BD Traffic Monitoring System}{Traffic Analytics}{PyTorch, YOLO11L, Flask, Docker}{%
-%   \href{https://github.com/shufanshahi/bd-traffic-monitoring-system}{\faGithub\ GitHub}
-%   \quad
-%   \href{https://huggingface.co/spaces/shufanshahi/bd-traffic-monitoring-system}{\faRocket\ Live}%
-% }
-% \begin{itemize}
-%   \item Fine-tuned YOLO on Bangladesh traffic data to detect local vehicle types.
-% \end{itemize}
-
-\projectheading{Biztrack}{Business Analytics}{Next.js, Node.js, PostgreSQL}{%
-  \href{https://github.com/shufanshahi/biztrack}{\faGithub\ GitHub}
-  \quad
-  \href{https://www.youtube.com/watch?v=STNoXqq8kQM}{\faYoutube\ Demo}%
+\projectheading{Bengali Speaker Diarization}{Speaker Turn Detection}{PyTorch, Silero VAD, ECAPA-TDNN}{%
+  \href{https://github.com/shufanshahi/Bengali-Speaker-Diarization}{\faGithub\ GitHub}%
 }
 \begin{itemize}
-  \item Built AI modules for real-time finance tracking, risk alerts, customer segmentation, and forecasting.
-\end{itemize}
-
-\projectheading{Postfolio}{Professional Networking}{Spring Boot, Next.js, Docker, RabbitMQ, Stripe}{%
-  \href{https://github.com/shufanshahi/Postfolio}{\faGithub\ GitHub}
-  \quad
-  \href{https://www.youtube.com/watch?v=U6N-ioqvg9c}{\faYoutube\ Demo}%
-}
-\begin{itemize}
-  \item Integrates social networking, portfolio and CV creation, job search, and AI interview preparation.
-\end{itemize}
-
-\projectheading{Redrick Routinson}{Campus Automation}{Python, React, Flask, Firebase}{%
-  \href{https://github.com/shufanshahi/RedrickRoutinson}{\faGithub\ GitHub}
-  \quad
-  \href{https://www.youtube.com/watch?v=Fg-GkZrsIzw}{\faYoutube\ Demo}%
-}
-\begin{itemize}
-  \item Built GA scheduling, QR exam attendance, class swapping, events, forums, and lost-and-found.
-\end{itemize}
-\end{rSection}
-
-\begin{rSection}{Research Experiences}
-\Needspace{3\baselineskip}
-\textbf{EthMuSAM: Mutual Scoring with SAM for Zero-Shot Anomaly Segmentation} \hfill \textbf{2026}
-\begin{itemize}
-  \item Combined DINOv2 patch embeddings with SAM-based mutual scoring to localize zero-shot anomalies.
-\end{itemize}
-\Needspace{3\baselineskip}
-\textbf{Prototype-Guided Adaptive Feature Learning for Multimodal Emotion Recognition in Conversation (MERC)} \hfill \textbf{2026}
-\begin{itemize}
-  \item Used adaptive weighting and modality prototypes to improve multimodal emotion recognition.
-\end{itemize}
-\Needspace{3\baselineskip}
-\textbf{Rethinking Visual Features in Graph-Based Multimodal Emotion Recognition in Conversations (MERC): From Low-Level Pixels to Semantic Representations} \hfill \textbf{2026}
-\begin{itemize}
-  \item Used semantic visual representations to improve graph-based multimodal emotion recognition.
-\end{itemize}
-\Needspace{3\baselineskip}
-\textbf{A Cross-Lingual Information Retrieval System for Bangla--English News Corpora} \hfill \textbf{2025}
-\begin{itemize}
-  \item Developed a hybrid CLIR system using lexical, fuzzy, and embedding-based retrieval.
-  \item Handled cross-language and code-switched queries with semantic ranking.
-\end{itemize}
-\Needspace{3\baselineskip}
-\textbf{Weakly Supervised Named Entity Recognition via Sparse-CHMM and BERT} \hfill \textbf{2025}
-\begin{itemize}
-  \item Aggregated noisy labeling functions without ground-truth annotations.
-  \item Modeled sequence dependencies using Sparse-CHMM with contextual embeddings.
+  \item Built a speech pipeline using neural voice activity detection, speaker embeddings, and agglomerative clustering to label timestamped speaker turns.
+  \item Estimated speaker counts with silhouette scores and exported diarization results to CSV.
 \end{itemize}
 
 \end{rSection}
 
 \begin{rSection}{Technical Skills}
-\textbf{Programming Languages:} Python, C++, Java \\
-\textbf{Data and Machine Learning:} PyTorch, TensorFlow, scikit-learn, NumPy, Pandas \\
-\textbf{Databases:} MySQL, Firebase, PostgreSQL \\
-\textbf{Web Development:} React, Tailwind CSS, Next.js, Spring Boot \\
-\textbf{Mobile Development:} React Native, Flutter \\
-\textbf{Visualization:} Matplotlib, Seaborn \\
-\textbf{Development Tools:} Git, Linux \\
+\textbf{Programming Languages:} Python, SQL, C++, Java \\
+\textbf{Machine Learning and Data:} PyTorch, TensorFlow, scikit-learn, Pandas, NumPy, feature engineering, model evaluation, forecasting, clustering and segmentation \\
+\textbf{Search, Ranking and Optimization:} Hybrid BM25 + dense retrieval, reranking, information retrieval, genetic algorithms \\
+\textbf{Generative AI and NLP:} RAG, LLMs, LangChain, LlamaIndex, Ollama, embeddings, BanglaBERT fine-tuning \\
+\textbf{Computer Vision and Audio:} YOLOv11, ByteTrack, Silero VAD, ECAPA-TDNN, speaker diarization \\
+\textbf{Backend and APIs:} REST APIs, Flask, Spring Boot, Node.js, RabbitMQ \\
+\textbf{Databases:} PostgreSQL, MySQL, Firebase, ChromaDB (vector DB) \\
+\textbf{DevOps and Tools:} Docker, Git, Linux \\
+\textbf{Web and Mobile:} React, Next.js, Tailwind CSS, React Native, Flutter \\
 \end{rSection}
 
 
-\begin{rSection}{Achievements, Awards and Scholarships}
+\begin{rSection}{Achievements and Awards}
 \begin{itemize}[leftmargin=*,label=$\bullet$]
   \item \textbf{5th Place, VAND4 International Competition} --- Zero-Shot Industrial Track \hfill \textbf{2026}
   \item \textbf{First Runner-up, IUT Coderush Hackathon} --- Rapid team application development \hfill \textbf{2025}
@@ -273,13 +233,14 @@ Higher Secondary Certificate (HSC) \hfill \textbf{GPA: 5.00/5.00}
 \end{itemize}
 \end{rSection}
 
-
-
-\begin{rSection}{Reference}
-\textbf{Shahriar Ivan} \\
-Assistant Professor, Department of CSE, IUT \\
-\textbf{Specialization:} Machine Learning, Deep Learning, Computer Vision \\
-\faEnvelope\ \href{mailto:shahriarivan@iut-dhaka.edu}{shahriarivan@iut-dhaka.edu}
-\end{rSection}
+% \begin{rSection}{Research experience}
+% \begin{itemize}[leftmargin=*,label=$\bullet$]
+%   \item \textbf{EthMuSAM: Mutual Scoring with SAM for Zero-Shot Anomaly Segmentation} \hfill \textbf{2026}
+%   \item \textbf{Prototype-Guided Adaptive Feature Learning for Multimodal Emotion Recognition} \hfill \textbf{2026}
+%   \item \textbf{Rethinking Visual Features in Graph-Based Multimodal Emotion Recognition} \hfill \textbf{2026}
+%   \item \textbf{A Cross-Lingual Information Retrieval System for Bangla--English News Corpora} \hfill \textbf{2025}
+%   \item \textbf{Weakly Supervised Named Entity Recognition via Sparse-CHMM and BERT} \hfill \textbf{2025}
+% \end{itemize}
+% \end{rSection}
 
 \end{document}
