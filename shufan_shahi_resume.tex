@@ -98,7 +98,7 @@
 }
 
 \begin{document}
-\fontsize{11.5pt}{14pt}\selectfont
+\fontsize{10.5pt}{12.6pt}\selectfont
 
 % \begin{rSection}{Professional Profile}
 % Computer Science undergraduate with hands-on experience in data analysis, machine learning, and full-stack development. Built web and mobile applications using React, Node.js, and Firebase. Skilled in relational databases, API integration, and delivering real-world solutions through hackathons and academic projects.
@@ -165,51 +165,52 @@ Higher Secondary Certificate (HSC) \hfill \textbf{GPA: 5.00/5.00}
   \item Encoded the descriptions into dense representations for graph-based multimodal reasoning, improving cross-modal alignment while providing a viable alternative to noisy handcrafted visual features.
 \end{itemize}
 
+\Needspace{3\baselineskip}
+\textbf{Investigating Lightweight Attention Placement in MobileNetV3 for Image Classification on CIFAR-100} \hfill \textbf{2026}
+\begin{itemize}
+  \item Ran a controlled six-variant ablation of ECA attention in MobileNetV3-Small, comparing addition, stacking, and replacement of native SE modules with paired significance testing across seeds.
+  \item Replacing SE with ECA cut parameters by 28.13\% (1.61M to 1.16M) with comparable accuracy (70.62\% vs. 70.77\% baseline).
+\end{itemize}
+\Needspace{3\baselineskip}
+\textbf{Deepfake Detection Using Cross-Covariance Image Transformers (XCiT)} \hfill \textbf{2026}
+\begin{itemize}
+  \item Trained an XCiT-based classifier to distinguish real from synthetic face images on a DeepfakeBench-derived dataset of over 260K images.
+  \item Achieved 94.4\% validation accuracy using linear-complexity cross-covariance attention.
+\end{itemize}
+
 \end{rSection}
 
 \Needspace{6\baselineskip}
 \begin{rSection}{Projects}
 
-\projectheading{DocuMind}{RAG Document Q\&A Assistant}{Python, LangChain, LlamaIndex, ChromaDB, Ollama}{%
-  \href{https://github.com/shufanshahi/DocuMind}{\faGithub\ GitHub}%
-}
+
+\projectheading{NeuroEye}{Retinal Disease Classification}{PyTorch, EfficientNetV2-L, ResNet-50, ViT}{}
 \begin{itemize}
-  \item Built a local RAG system for documents with cited answers and hallucination guardrails.
-  \item Compared 4 chunking methods and 2 embedding models; added hybrid BM25 and reranking.
+  \item Built a weighted ensemble of EfficientNetV2-L, ResNet-50, and ViT-B/16 with learnable fusion weights to classify 10 retinal conditions from fundus images.
+  \item Trained with mixed precision, per-model learning rates, and early stopping; reached 77.9\% test accuracy and 0.80 macro F1.
 \end{itemize}
 
-\projectheading{Benhallu}{Bengali Hallucination Detection}{Python, RAG, BanglaBERT, scikit-learn}{%
-  \href{https://github.com/shufanshahi/Benhallu}{\faGithub\ GitHub}%
-}
+\projectheading{Drone Vision}{Aerial Tracking}{PyTorch, YOLOv11X, ByteTrack}{}
+\begin{itemize}
+  \item Fine-tuned YOLOv11X on VisDrone and integrated ByteTrack for human counting and multi-object tracking in aerial footage.
+\end{itemize}
+
+\projectheading{Benhallu}{Bengali Hallucination Detection}{Python, RAG, BanglaBERT, scikit-learn}{}
 \begin{itemize}
   \item Built a retrieval-augmented pipeline to verify Bengali answers against supplied context or a Bengali QA knowledge base.
   \item Created a hallucination dataset and used fine-tuned BanglaBERT with answer-comparison features to classify responses.
 \end{itemize}
 
-\projectheading{Bengali Speaker Diarization}{Speaker Turn Detection}{PyTorch, Silero VAD, ECAPA-TDNN}{%
-  \href{https://github.com/shufanshahi/Bengali-Speaker-Diarization}{\faGithub\ GitHub}%
-}
+\projectheading{Bengali Speaker Diarization}{Speaker Turn Detection}{PyTorch, Silero VAD, ECAPA-TDNN}{}
 \begin{itemize}
   \item Built a speech pipeline using neural voice activity detection, speaker embeddings, and agglomerative clustering to label timestamped speaker turns.
   \item Estimated speaker counts with silhouette scores and exported diarization results to CSV.
 \end{itemize}
 
-\projectheading{Drone Vision}{Aerial Tracking}{PyTorch, YOLOv11X, ByteTrack}{%
-  \href{https://github.com/shufanshahi/droneVision}{\faGithub\ GitHub}%
-}
-\begin{itemize}
-  \item Fine-tuned YOLOv11X on VisDrone and integrated ByteTrack for human counting and multi-object tracking in aerial footage.
-\end{itemize}
 
 
-\projectheading{Biztrack}{Business Analytics}{Next.js, Node.js, PostgreSQL}{%
-  \href{https://github.com/shufanshahi/biztrack}{\faGithub\ GitHub}
-  \quad
-  \href{https://www.youtube.com/watch?v=STNoXqq8kQM}{\faYoutube\ Demo}%
-}
-\begin{itemize}
-  \item Built AI modules for real-time financial tracking, risk alerts, customer segmentation, and forecasting.
-\end{itemize}
+
+
 \end{rSection}
 
 \begin{rSection}{Technical Skills}
